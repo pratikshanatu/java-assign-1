@@ -1,23 +1,23 @@
 package StringPract;
 
+import java.util.Scanner;
+
 public class Reverseword 
 {
 	public static void main(String[] args)
 	{
-			String str= "Pratiksha", 
-			str1="";
-			char ch;
-				
-			System.out.print("Word: ");
-			System.out.println("Pratiksha"); 
-				
-			for (int i=0; i<str.length(); i++)
+			Scanner sc=new Scanner(System.in);
+			System.out.println("Enter string");
+			String str=sc.next();
+			System.out.println("Original string:"+str);
+			String rev="";
+			int length =str.length();
+			for(int i=length-1; i>=0; i--)
 			{
-				ch= str.charAt(i);
-				str1= ch+str1;
+				rev=rev+str.charAt(i);
 			}
-			System.out.println("Reversed word: "+ str1);
-			System.out.println(str1.toUpperCase());
+			System.out.println("Reverse string" +rev);
+			System.out.println("String in Upper case:" +str.toUpperCase());
 	}
 }
 
